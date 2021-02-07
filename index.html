@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,66 +25,140 @@
                 </div>
             </div>
 
+
+
+
+            <section id="skills">
+                <img src="/mywebsiteImages/IndustrialAutomayionlogo.png" style="background-color: white;">
+                <img src="/mywebsiteImages/siemens.jpg">
+                <img src="/mywebsiteImages/rockwell.jpg">
+                <img src="/mywebsiteImages/arduino.png">
+                <img src="/mywebsiteImages/raspeberrypi.jpg">
+                <img src="/mywebsiteImages/aspnet-logo.png">
+                <img src="/mywebsiteImages/c-sharp.png">
+                <img src="/mywebsiteImages/javacriptCssHtml.jpg">
+                <img src="/mywebsiteImages/kisspng-jquery-web-development.jpg">
+                <img src="/mywebsiteImages/mern.png">
+                <img src="/mywebsiteImages/mysql.jpg">
+                <img src="/mywebsiteImages/reactNative.png">
+            </section>
         </div>
 
 
 
+        <div style=" margin-top:50vh"></div>
+        <!-- 
+    <div>
+
+        <h3>FORM EXERCISE</h3>
+
+        <form id="new-list" style="background-color: tomato; height: 50px;">
+            <span> <input type="text" placeholder="fullname"> </span>
+            <span class="button"
+                style="background-color: red; padding :5px; border-radius: 3px; margin-left: 50px;">submit</span>
+            <ul id="createdList"> </ul>
 
 
-
-        <div id="skills">
-            <div>
-                <img src="https://www.industrialautomation.us/wp-content/uploads/2020/05/logo.png" style="background-color: white;">
-
-                <img src="https://pbs.twimg.com/profile_images/1278961539081482241/bpnh0sdU.jpg">
-                <img
-                    src="https://lh3.googleusercontent.com/proxy/M_vQ9J8p-nsXG8no-xBr5DOTsQ91v4XqcMzkCfOTQlaIHU9J80S2pPe_jx-WUUQO2ToC3bzI2lBAUTXS_5VeE138n4hX7KbZq5fwCozkXUSL">
-               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRJffUFIyFC5_X5wuN0-83PTLmHt3ARflh8g&usqp=CAU" alt="">
-                    <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnzHXifS0rk99OYfMW2qhfO1xPGtzzOGvgVw&usqp=CAU">
-                <img src="https://img1.pnghut.com/5/16/3/hs2vfBvr9A/web-development-html-brand-area-browser.jpg">
-                <img src="https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png">
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU7QJaQgSspnTRkt-yH0JQKJfXjRMQI52JXQ&usqp=CAU">
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXkW_v-_CSTB5d-tgkXa1T2D1BqOisVq5--A&usqp=CAU">
-                <img src="https://img2.pngio.com/aspnet-logo-png-transparent-5-png-image-aspnet-png-522_305.png">
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNvySLOHXf8Wt50qEPBOrwzfp3zzvY-IzMyw&usqp=CAU">
-
-                <img
-                    src="https://images.squarespace-cdn.com/content/v1/56b8dfcf62cd94ec072ddb33/1547134322115-TKQN4NJZILFDO4QZPK1D/ke17ZwdGBToddI8pDm48kKlpVKiEURsX431SqXz8nxBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzVE_KPDWd5nuuyA2GuVyRzFpGKFhPO_p49iyD9f3TqR2SihW5_e2KtoMig5lJZCBA/Mean+Stack.png">
-                <img src="https://i.morioh.com/139b757e13.png">
-
-                <img src="https://i.pinimg.com/originals/3a/51/12/3a51129274fc2cf77ec774ed11845928.jpg" alt="">
-
-            </div>
-        </div>
-
-
-
-    </div>
+        </form>
 
 
 
 
+    </div> -->
 
 
-
-    <script>
-
-        // let imageList = document.querySelectorAll('img');
-
-
-        setInterval(() => {
+        <script src="/jquery.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
 
 
 
-        }, 2000)
+        <script>
+
+            $(window).on("load", () => {
+                setInterval(() => {
+                    $(".display > h2, .display .btn ").effect("bounce", { times: 10, distance: -50 }, 1000)
+                }, 2000)
 
 
-    </script>
+                setInterval(() => {
+                  $("#skills").fadeOut(1000).fadeIn(6000);
+                }, 2000)
+
+
+
+
+
+
+
+
+                // $(".display > h2").click(function () {
+                //     doBounce($(this), 3, '10px', 300);
+                // });
+                // function doBounce(element, times, distance, speed) {
+                //     for (i = 0; i < times; i++) {
+                //         element.animate({ marginTop: '-=' + distance }, speed)
+                //             .animate({ marginTop: '+=' + distance }, speed);
+                //     }
+                // }
+
+
+
+
+
+            })
+
+
+
+
+
+
+
+
+        // let form = document.forms['new-list'];
+        // let button = form.querySelector('.button');
+        // button.addEventListener('click', (event) => {
+        //     event.preventDefault();
+
+
+        //     let inputValue = form.querySelector('input').value;
+        //     let ul = form.querySelector('ul');
+        //     let li = document.createElement('li');
+        //     let newSpanFullname = document.createElement('span');
+        //     let newSpanDelete = document.createElement('span');
+        //     newSpanFullname.textContent = inputValue;
+        //     newSpanDelete.textContent = "DELETE";
+
+        //     newSpanDelete.classList.add("delete");
+
+
+        //     li.appendChild(newSpanFullname);
+        //     li.appendChild(newSpanDelete);
+        //     ul.appendChild(li);
+
+
+
+
+        // })
+
+
+        // form.addEventListener('click', (event) => {
+
+        //     if (event.target.textContent == "DELETE") {
+        //         let li = event.target.parentElement
+
+
+        //         let ul = form.querySelector('ul');
+        //         ul.removeChild(li)
+
+        //     }
+        // })
+
+
+
+
+
+        </script>
 
 
 </body>

@@ -79,7 +79,9 @@ z-index: -1;
 /* skillss.............. */
 #skills {
     position: absolute;
-    right: 0px;
+    right: 10px;
+    top: 10px;
+    padding-right: 35px;
     min-height: 100%;
     max-width: 20%;
     color: rgb(255, 255, 255);
@@ -98,10 +100,11 @@ z-index: -1;
 
 
 #skills img {
-    flex-shrink: 90;
+
     width: 100px;
     height: 70px;
     margin: 5px;
+    border-radius: 20px;
 
 }
 
