@@ -29,42 +29,19 @@
 
 
             <section id="skills">
-                <img src="/mywebsiteImages/IndustrialAutomayionlogo.png" style="background-color: white;">
-                <img src="/mywebsiteImages/siemens.jpg">
-                <img src="/mywebsiteImages/rockwell.jpg">
-                <img src="/mywebsiteImages/arduino.png">
-                <img src="/mywebsiteImages/raspeberrypi.jpg">
-                <img src="/mywebsiteImages/aspnet-logo.png">
-                <img src="/mywebsiteImages/c-sharp.png">
-                <img src="/mywebsiteImages/javacriptCssHtml.jpg">
-                <img src="/mywebsiteImages/kisspng-jquery-web-development.jpg">
-                <img src="/mywebsiteImages/mern.png">
-                <img src="/mywebsiteImages/mysql.jpg">
-                <img src="/mywebsiteImages/reactNative.png">
+
+
+                <img id="display1" src="/mywebsiteImages/IndustrialAutomayionlogo.png" style="background-color: white;">
+                <img id="display2" src="/mywebsiteImages/siemens.jpg">
+                <img id="display3" src="/mywebsiteImages/rockwell.jpg">
+                <img id="display4" src="/mywebsiteImages/reactNative.png">
+                <img id="display5" src="/mywebsiteImages/mern.png">
+
+
             </section>
         </div>
 
 
-
-        <div style=" margin-top:50vh"></div>
-        <!-- 
-    <div>
-
-        <h3>FORM EXERCISE</h3>
-
-        <form id="new-list" style="background-color: tomato; height: 50px;">
-            <span> <input type="text" placeholder="fullname"> </span>
-            <span class="button"
-                style="background-color: red; padding :5px; border-radius: 3px; margin-left: 50px;">submit</span>
-            <ul id="createdList"> </ul>
-
-
-        </form>
-
-
-
-
-    </div> -->
 
 
         <script src="/jquery.js"></script>
@@ -73,39 +50,79 @@
 
 
 
-        <script>
 
+
+
+
+
+
+        <script>
             $(window).on("load", () => {
                 setInterval(() => {
-                    $(".display > h2, .display .btn ").effect("bounce", { times: 10, distance: -50 }, 1000)
-                }, 2000)
+                    $(".display > h2, .display .btn ").effect("bounce", { times: 10, distance: -100 }, 1000)
+                }, 2000);
 
-
+                let rotation = 0;
                 setInterval(() => {
-                  $("#skills").fadeOut(1000).fadeIn(6000);
-                }, 2000)
+
+
+                    rotation++
+
+                    if (rotation == 1) {
+
+                        $("img").fadeIn(1000) 
+                        $("#display1").attr("src", "/mywebsiteImages/arduino.png")
+                        $("#display2").attr("src", "/mywebsiteImages/raspeberrypi.jpg")
+                        $("#display3").attr("src", "/mywebsiteImages/mysql.jpg")
+                        $("#display4").attr("src", "/mywebsiteImages/niceMongoDB.jpg")
+                        $("#display5").attr("src", "/mywebsiteImages/GIT.png")
+                        $("img").fadeOut(4000) .effect("bounce", { times: 1, distance: -20 }, 500) 
+                    }
+
+                    if (rotation == 2) {
+                        $("img").fadeIn(1000)
+
+                        $("#display1").attr("src", "/mywebsiteImages/logo-vuejs-min.png")
+                        $("#display2").attr("src", "/mywebsiteImages/kisspng-jquery-web-development.jpg")
+                        $("#display3").attr("src", "/mywebsiteImages/javacriptCssHtml.jpg")
+                        $("#display4").attr("src", "/mywebsiteImages/c-sharp.png")
+                        $("#display5").attr("src", "/mywebsiteImages/siemens.jpg")
+                        $("img").fadeOut(5000) .effect("bounce", { times: 1, distance: -20 }, 1000)  
+
+                    }
+
+                    if (rotation == 3) {
+                        $("img").fadeIn(1000) 
+
+                        $("#display1").attr("src", "/mywebsiteImages/aspnet-logo.png")
+                        $("#display2").attr("src", "/mywebsiteImages/GIT.png")
+                        $("#display3").attr("src", "/mywebsiteImages/raspeberrypi.jpg")
+                        $("#display4").attr("src", "/mywebsiteImages/IndustrialAutomayionlogo.png").css({
+                            "background-color": "white"
+                        })
+                        $("#display5").attr("src", "/mywebsiteImages/kisspng-jquery-web-development.jpg")
+                        $("img").fadeOut(5000)  .effect("bounce", { times: 1, distance: -20 }, 1000)
+
+                    }
+
+
+                    if (rotation == 4) {
+                        $("img").fadeIn(1000) 
+                        $("#display1").attr("src", "/mywebsiteImages/IndustrialAutomayionlogo.png")
+                        $("#display2").attr("src", "/mywebsiteImages/siemens.jpg")
+                        $("#display3").attr("src", "/mywebsiteImages/rockwell.jpg")
+                        $("#display4").attr("src", "/mywebsiteImages/reactNative.png")
+                        $("#display5").attr("src", "/mywebsiteImages/mern.png")
+                        $("img").fadeOut(5000).effect("bounce", { times: 1, distance: -10 }, 1000)
+
+                        rotation = 0;
+                    }
+
+                }, 7000);
 
 
 
-
-
-
-
-
-                // $(".display > h2").click(function () {
-                //     doBounce($(this), 3, '10px', 300);
-                // });
-                // function doBounce(element, times, distance, speed) {
-                //     for (i = 0; i < times; i++) {
-                //         element.animate({ marginTop: '-=' + distance }, speed)
-                //             .animate({ marginTop: '+=' + distance }, speed);
-                //     }
-                // }
-
-
-
-
-
+            
             })
 
 
