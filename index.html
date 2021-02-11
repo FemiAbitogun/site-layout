@@ -3,7 +3,7 @@
 
 <head>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/home.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FEMI ABITOGUN | WELCOME</title>
@@ -15,37 +15,63 @@
 
 
     <div class="flex-container">
-        <div id="display-profile">
-            <div class="display">
-                <h2>Hi!<span></span></h2>
-                <h2>My Name is<span></span></h2>
-                <h2>Femi <span></span></h2>
-                <div class="btn" style="margin-top: 20px;">
-                    <a href="" class="button">VIEW CV</a>
-                </div>
+
+        <div class="mail_overlay" style="display: none;">
+
+            <div>
+                <form>
+                    <input type="text" placeholder="SUBJECT" id="subject">
+                    <input type="email" placeholder="EMAIL" id="email">
+                    <textarea name="" id="" cols="3" rows="10" placeholder="MESSAGE"></textarea>
+                    <span> <button type="submit" class="button">SEND</button>
+                        <button type="submit" class="button cancel" style="background-color: red">CANCEL</button>
+                    </span>
+
+                </form>
+
             </div>
 
 
 
 
-            <section id="skills">
 
 
-                <img id="display1" src="/mywebsiteImages/IndustrialAutomayionlogo.png" style="background-color: white;">
-                <img id="display2" src="/mywebsiteImages/siemens.jpg">
-                <img id="display3" src="/mywebsiteImages/rockwell.jpg">
-                <img id="display4" src="/mywebsiteImages/reactNative.png">
-                <img id="display5" src="/mywebsiteImages/mern.png">
 
 
-            </section>
+
+        </div>
+
+
+
+        <div class="navbar" style="order: 1;">
+            <img src="/mywebsiteImages/home.png">
+            <img
+                src="/mywebsiteImages/png-transparent-black-sprocket-computer-icons-skill-organization-management-information-skill-miscellaneous-innovation-expert.png">
+
+            <div id="mail">
+                <img src="/mywebsiteImages/mail-post-symbol-logo-C7C3A0C8BD-seeklogo.com.png">
+            </div>
+
+        </div>
+
+
+        <div class="profile" style="order: 2;">
+            <div>
+                <h2>Hi!</h2>
+                <h2>My Name is</h2>
+                <h2> <b style=" color:crimson">F</b>emi </h2>
+                <button><a href="">CONTACT</a></button>
+            </div>
+
         </div>
 
 
 
 
-        <script src="/jquery.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+
+
+    </div>
 
 
 
@@ -55,127 +81,33 @@
 
 
 
+    <script src="/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="/script.js"></script>
 
-        <script>
-            $(window).on("load", () => {
-                setInterval(() => {
-                    $(".display > h2, .display .btn ").effect("bounce", { times: 10, distance: -100 }, 1000)
-                }, 2000);
-
-                let rotation = 0;
-                setInterval(() => {
-
-
-                    rotation++
-
-                    if (rotation == 1) {
-
-                        $("img").fadeIn(1000) 
-                        $("#display1").attr("src", "/mywebsiteImages/arduino.png")
-                        $("#display2").attr("src", "/mywebsiteImages/raspeberrypi.jpg")
-                        $("#display3").attr("src", "/mywebsiteImages/mysql.jpg")
-                        $("#display4").attr("src", "/mywebsiteImages/niceMongoDB.jpg")
-                        $("#display5").attr("src", "/mywebsiteImages/GIT.png")
-                        $("img").fadeOut(4000) .effect("bounce", { times: 1, distance: -20 }, 500) 
-                    }
-
-                    if (rotation == 2) {
-                        $("img").fadeIn(1000)
-
-                        $("#display1").attr("src", "/mywebsiteImages/logo-vuejs-min.png")
-                        $("#display2").attr("src", "/mywebsiteImages/kisspng-jquery-web-development.jpg")
-                        $("#display3").attr("src", "/mywebsiteImages/javacriptCssHtml.jpg")
-                        $("#display4").attr("src", "/mywebsiteImages/c-sharp.png")
-                        $("#display5").attr("src", "/mywebsiteImages/siemens.jpg")
-                        $("img").fadeOut(5000) .effect("bounce", { times: 1, distance: -20 }, 1000)  
-
-                    }
-
-                    if (rotation == 3) {
-                        $("img").fadeIn(1000) 
-
-                        $("#display1").attr("src", "/mywebsiteImages/aspnet-logo.png")
-                        $("#display2").attr("src", "/mywebsiteImages/GIT.png")
-                        $("#display3").attr("src", "/mywebsiteImages/raspeberrypi.jpg")
-                        $("#display4").attr("src", "/mywebsiteImages/IndustrialAutomayionlogo.png").css({
-                            "background-color": "white"
-                        })
-                        $("#display5").attr("src", "/mywebsiteImages/kisspng-jquery-web-development.jpg")
-                        $("img").fadeOut(5000)  .effect("bounce", { times: 1, distance: -20 }, 1000)
-
-                    }
-
-
-                    if (rotation == 4) {
-                        $("img").fadeIn(1000) 
-                        $("#display1").attr("src", "/mywebsiteImages/IndustrialAutomayionlogo.png")
-                        $("#display2").attr("src", "/mywebsiteImages/siemens.jpg")
-                        $("#display3").attr("src", "/mywebsiteImages/rockwell.jpg")
-                        $("#display4").attr("src", "/mywebsiteImages/reactNative.png")
-                        $("#display5").attr("src", "/mywebsiteImages/mern.png")
-                        $("img").fadeOut(5000).effect("bounce", { times: 1, distance: -10 }, 1000)
-
-                        rotation = 0;
-                    }
-
-                }, 7000);
+    <script>
 
 
 
-            
-            })
+        const mailClicked = document.getElementById("mail");
+
+        mailClicked.addEventListener("click", () => {
+            document.querySelector(".mail_overlay").style.display = "block";
+        })
+
+
+        const hideForm= document.querySelector(".cancel").addEventListener("click",()=>{
+            document.querySelector(".mail_overlay").style.display = "none";  
+        })
+
+
+
+    </script>
 
 
 
 
 
-
-
-
-        // let form = document.forms['new-list'];
-        // let button = form.querySelector('.button');
-        // button.addEventListener('click', (event) => {
-        //     event.preventDefault();
-
-
-        //     let inputValue = form.querySelector('input').value;
-        //     let ul = form.querySelector('ul');
-        //     let li = document.createElement('li');
-        //     let newSpanFullname = document.createElement('span');
-        //     let newSpanDelete = document.createElement('span');
-        //     newSpanFullname.textContent = inputValue;
-        //     newSpanDelete.textContent = "DELETE";
-
-        //     newSpanDelete.classList.add("delete");
-
-
-        //     li.appendChild(newSpanFullname);
-        //     li.appendChild(newSpanDelete);
-        //     ul.appendChild(li);
-
-
-
-
-        // })
-
-
-        // form.addEventListener('click', (event) => {
-
-        //     if (event.target.textContent == "DELETE") {
-        //         let li = event.target.parentElement
-
-
-        //         let ul = form.querySelector('ul');
-        //         ul.removeChild(li)
-
-        //     }
-        // })
-
-
-
-
-
-        </script>
 
 
 </body>

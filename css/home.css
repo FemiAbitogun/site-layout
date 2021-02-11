@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white;
+    background: url('/mywebsiteImages/programmin1.jpg') no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bolder;
+    color: white;
+}
+
+
+
+
+.flex-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.flex-container::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+
+}
+
+.flex-container .navbar {
+    height: 100%;
+    width: 80px;
+    padding: 5px;
+    align-self: center;
+    justify-self: flex-start;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgba(46, 3, 3, 0.089);
+}
+
+.flex-container .navbar img {
+    width: 70px;
+    height: 50px;
+}
+
+
+.flex-container .profile {
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 30px;
+    justify-content: center;
+
+
+}
+
+
+.profile div>button {
+    width: 150px;
+    height: 50px;
+    border: 3px solid white;
+    padding: 10px 0px;
+    background-color: transparent;
+    letter-spacing: .1em;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+
+
+
+.mail_overlay {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: .9;
+    z-index: 2;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.mail_overlay div {
+
+    max-width: 80%;
+    height: 100%;
+    margin: auto;
+
+
+}
+
+form {
+    margin-top: 10px;
+    width: 50%;
+    height: 100%;
+    display: grid;
+}
+
+
+
+.mail_overlay div form textarea,
+button {
+    padding: 2px;
+
+
+    background-color: transparent;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+
+}
+
+.mail_overlay div form input[type="text"] {
+
+padding: 2px;
+    background-color: transparent;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+}
+
+.mail_overlay div form input[type="email"] {
+    padding: 2px;
+
+
+    background-color: transparent;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+
+}
+
+
+.button {
+    width: 120px;
+    height: 60px;
+    border: 3px solid white;
+    background-color: transparent;
+    letter-spacing: .1em;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+    margin-top: 5px;
+
+}
