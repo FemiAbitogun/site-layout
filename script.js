@@ -28,8 +28,7 @@ $(window).on("load", function () {
     setInterval(() => {
 
         $(".profile h2").effect("bounce", { times: 10, distance: -60 }, 1000);
-        $(".profile div button").effect("bounce", { times: 10, distance: -15 }, 1000);
-
+        $(".profile #femi").effect("bounce", { times: 10, distance: 15 }, 1000);
 
     }, 2000)
 

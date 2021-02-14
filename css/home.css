@@ -1,3 +1,7 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +9,34 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Lexend Mega', sans-serif;
     font-weight: bold;
     font-size: 1.1em;
     color: white;
     background: url('/mywebsiteImages/programmin1.jpg') no-repeat;
     background-size: cover;
     background-position: top center;
+    position: relative;
 }
+
+
+
+body::after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .6;
+    z-index: -1;
+}
+
+
+
+
 
 a {
     text-decoration: none;
@@ -22,27 +46,12 @@ a {
 }
 
 
-
-
 .flex-container {
     height: 100vh;
     width: 100%;
     display: flex;
     position: relative;
     z-index: 1;
-}
-
-.flex-container::after {
-    width: 100%;
-    height: 100%;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    opacity: .5;
-    z-index: -1;
-
 }
 
 .flex-container .navbar {
@@ -55,7 +64,8 @@ a {
     justify-content: space-evenly;
     text-align: center;
     flex-direction: column;
-    background-color: rgba(46, 3, 3, 0.089);
+    background-color: rgba(10, 10, 10, 0.719);
+    cursor: pointer;
 }
 
 .flex-container .navbar img {
@@ -65,30 +75,36 @@ a {
 
 
 .flex-container .profile {
-   
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-right: 30px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-
-
 }
 
 
-.profile div>button {
-    width: 150px;
-    height: 50px;
-    border: 3px solid white;
-    padding: 10px 0px;
-    background-color: transparent;
-    letter-spacing: .1em;
+#phone {
+    display: inline-block;
     font-weight: bold;
-    font-size: 1em;
-    margin-top: 10px;
 }
+
+#mail2 {
+    display: inline-block;
+    background-color: rgba(0, 0, 255, 0.24);
+    font-weight: bold;
+
+}
+
+#title {
+    display: inline-block;
+    font-weight: bold;
+
+
+}
+
+
+
 
 
 
@@ -102,12 +118,30 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: black;
+    background-color: rgba(255, 217, 0, 0.13);
     opacity: .9;
+    z-index: 2;
+    
+    overflow: hidden;
+}
+
+
+.skills_overlay {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.712);
+
     z-index: 2;
     cursor: pointer;
     overflow: hidden;
 }
+
 
 
 .mail_overlay div {
@@ -142,10 +176,10 @@ button {
 }
 
 .mail_overlay div form input[type="text"] {
-
-padding: 2px;
+    height: 50px;
+    padding: 2px;
     background-color: transparent;
-    margin-bottom: 10px;
+
     font-weight: bold;
     color: white;
     font-size: 1em;
@@ -153,10 +187,10 @@ padding: 2px;
 
 .mail_overlay div form input[type="email"] {
     padding: 2px;
-
+    height: 50px;
 
     background-color: transparent;
-    margin-bottom: 10px;
+
     color: white;
     font-weight: bold;
     font-size: 1em;
@@ -174,5 +208,214 @@ padding: 2px;
     font-size: 1em;
     color: white;
     margin-top: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* skills slider */
+
+.wrapper {
+
+    position: relative;
+    width: 320px;
+    margin: 150px auto;
+    perspective: 2000px;
+    /* overflow: hidden; */
+}
+
+
+.image-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 40s steps(10000, end) infinite;
+}
+
+
+.single-img {
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /* width: 300px; */
+    height: 200px;
+    width: 100px;
+}
+
+
+
+.single-img img {
+
+    /* width: 300px; */
+    width: 200px;
+    height: 200px;
+    /* border: 5px solid #fff; */
+
+}
+
+
+.single-img.automation {
+
+    transform: rotateY(1deg) translateZ(300px);
+
+}
+
+.single-img.siemens {
+
+    transform: rotateY(22deg) translateZ(300px);
+
+}
+
+.single-img.rockwell {
+
+    transform: rotateY(44deg) translateZ(300px);
+
+}
+
+
+.single-img.raspberry {
+
+    transform: rotateY(66deg) translateZ(300px);
+
+}
+
+
+.single-img.arduino {
+
+    transform: rotateY(88deg) translateZ(300px);
+
+}
+
+.single-img.aspnet {
+
+    transform: rotateY(110deg) translateZ(300px);
+
+}
+
+.single-img.csharp {
+
+    transform: rotateY(132deg) translateZ(300px);
+
+}
+
+.single-img.javacript {
+
+    transform: rotateY(154deg) translateZ(300px);
+
+}
+
+
+
+.single-img.jquery {
+
+    transform: rotateY(176deg) translateZ(300px);
+
+}
+
+.single-img.vuejs {
+
+    transform: rotateY(198deg) translateZ(300px);
+
+}
+
+.single-img.mern {
+
+    transform: rotateY(222deg) translateZ(300px);
+
+}
+
+.single-img.mysql {
+
+    transform: rotateY(242deg) translateZ(300px);
+
+}
+
+.single-img.GIT {
+
+    transform: rotateY(264deg) translateZ(300px);
+
+}
+
+.single-img.niceMongoDB {
+
+    transform: rotateY(286deg) translateZ(300px);
+
+}
+
+.single-img.reactNative {
+
+    transform: rotateY(308deg) translateZ(300px);
+
+}
+
+
+.single-img.python {
+
+    transform: rotateY(330deg) translateZ(300px);
+
+}
+
+
+
+
+
+@keyframes animate {
+
+
+    from {
+        transform: rotateY(-360deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+
+}
+
+
+
+
+
+@keyframes span_animation {
+
+
+    50% {
+
+        width: 100%;
+        left: 0;
+
+    }
+
+
+
+
+    100% {
+
+        width: 0%;
+        left: 100%;
+
+    }
+
+
+}
+
+
+@media screen and (max-width :320px){
+    .flex-container .profile {
+        width: 100%;
+        height: 100%;
+        padding-right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
 
 }

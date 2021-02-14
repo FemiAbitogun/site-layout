@@ -14,7 +14,102 @@
 
 
 
+
+
+
+
+
+
+
     <div class="flex-container">
+
+
+        <div class="skills_overlay" style="display: none;">
+            <p style="position: absolute; top: 1px; width: 50%; margin:0px auto;">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Consectetur, culpa!</p>
+
+            <div class="wrapper ">
+                <div class="image-area">
+                    <div class="single-img   automation">
+                        <img src="/mywebsiteImages/IndustrialAutomayionlogo.png" alt="">
+                    </div>
+
+                    <div class=" single-img    siemens">
+                        <img src="/mywebsiteImages/siemens.jpg" alt="">
+                    </div>
+
+                    <div class="single-img  rockwell">
+                        <img src="/mywebsiteImages/rockwell.jpg" alt="">
+                    </div>
+
+                    <div class="single-img  raspberry">
+                        <img src="/mywebsiteImages/raspberry-pi-logo1.png" alt="">
+                    </div>
+
+
+                    <div class="single-img  arduino">
+                        <img src="/mywebsiteImages/arduino.png" alt="">
+                    </div>
+
+
+                    <div class="single-img  aspnet">
+                        <img src="/mywebsiteImages/aspnet-logo.png" alt="">
+                    </div>
+
+
+                    <div class="single-img  csharp">
+                        <img src="/mywebsiteImages/c-sharp.png" alt="">
+                    </div>
+
+                    <div class="single-img  javacript">
+                        <img src="/mywebsiteImages/javacriptCssHtml.jpg" alt="">
+                    </div>
+
+                    <div class="single-img  jquery">
+                        <img src="/mywebsiteImages/kisspng-jquery-web-development.jpg" alt="">
+                    </div>
+                    <div class="single-img  vuejs" style="background-color: white;">
+                        <img src="/mywebsiteImages/vuejs2.png" alt="">
+                    </div>
+                    <div class="single-img  mern">
+                        <img src="/mywebsiteImages/mern.png" alt="">
+                    </div>
+                    <div class="single-img  mysql">
+                        <img src="/mywebsiteImages/mysql.jpg" alt="">
+                    </div>
+
+                    <div class="single-img  GIT">
+                        <img src="/mywebsiteImages/GIT.png" alt="">
+                    </div>
+                    <div class="single-img  niceMongoDB">
+                        <img src="/mywebsiteImages/niceMongoDB.jpg" alt="">
+                    </div>
+                    <div class="single-img  reactNative">
+                        <img src="/mywebsiteImages/React-Native-Reddit.png" alt="">
+                    </div>
+
+                    <div class="single-img  python">
+                        <img src="/mywebsiteImages/do-web-development-using-python-django.png" alt="">
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
 
         <div class="mail_overlay" style="display: none;">
 
@@ -24,31 +119,39 @@
                     <input type="email" placeholder="EMAIL" id="email">
                     <textarea name="" id="" cols="3" rows="10" placeholder="MESSAGE"></textarea>
                     <span> <button type="submit" class="button">SEND</button>
-                        <button type="submit" class="button cancel" style="background-color: red">CANCEL</button>
+                        <button type="submit" class="button cancel"
+                            style="background-color:transparent;color: red;">CANCEL</button>
                     </span>
 
                 </form>
 
             </div>
 
-
-
-
-
-
-
-
-
         </div>
 
 
 
-        <div class="navbar" style="order: 1;">
-            <img src="/mywebsiteImages/home.png">
-            <img
-                src="/mywebsiteImages/png-transparent-black-sprocket-computer-icons-skill-organization-management-information-skill-miscellaneous-innovation-expert.png">
 
-            <div id="mail">
+
+
+        <div class="navbar" style="order: 1;">
+
+
+
+
+            <div>
+                <a href="https://github.com/FemiAbitogun?tab=repositories"><img src="/mywebsiteImages/GIT.png"></a>
+            </div>
+
+            <div>
+                <a href="http://www.linkedin.com/in/femi-abitogun-b367a1102/"><img
+                        src="/mywebsiteImages/linkedin-icon-png-transparent-images--pictures--becuo-4.png"></a>
+            </div>
+            <div id="skills">
+                <img src="/mywebsiteImages/skilll3.jpg">
+            </div>
+
+            <div id="mail" style="background-color: rgba(0, 0, 255, 0.281);">
                 <img src="/mywebsiteImages/mail-post-symbol-logo-C7C3A0C8BD-seeklogo.com.png">
             </div>
 
@@ -56,14 +159,41 @@
 
 
         <div class="profile" style="order: 2;">
+
+
+
             <div>
-                <h2>Hi!</h2>
-                <h2>My Name is</h2>
-                <h2> <b style=" color:crimson">F</b>emi </h2>
-                <button><a href="">CONTACT</a></button>
+                <h2 id="hi">Hi! <span></span></h2>
+                <h2 id="mynameis">My Name is <span></span></h2>
+                <h2 id="femi" style="margin-bottom: 1em;"><b
+                        style=" color:rgb(252, 0, 0); font-size: 3em;margin-left: -10px;  ">F</b>emi <span></span>
+                </h2>
+
+
+
+                <h5 id="title">SOFTWARE | INDUSTRIAL AUTOMATION ENGINEER
+                    <span></span>
+                </h5> <br>
+                <h5 id="phone">+2348138376543 | +2349026080617
+                    <span></span>
+                </h5><br>
+
+                <h5 id="mail2"> abitogun22@gmail.com
+                    <span></span>
+                </h5>
+
+
+
+
             </div>
 
+
+
+
+
+
         </div>
+
 
 
 
@@ -96,9 +226,34 @@
         })
 
 
-        const hideForm= document.querySelector(".cancel").addEventListener("click",()=>{
-            document.querySelector(".mail_overlay").style.display = "none";  
+        document.querySelector(".cancel").addEventListener("click", () => {
+            document.querySelector(".mail_overlay").style.display = "none";
         })
+
+
+
+
+
+
+        const skillsClicked = document.getElementById("skills");
+
+        skillsClicked.addEventListener("click", () => {
+            document.querySelector(".skills_overlay").style.display = "block";
+        })
+
+
+        const hideSkills = document.querySelector(".skills_overlay").addEventListener("click", () => {
+            document.querySelector(".skills_overlay").style.display = "none";
+        })
+
+
+
+
+
+
+
+
+
 
 
 
