@@ -25,12 +25,66 @@ $(window).on("load", function () {
         */
 
 
+
+       $("#hi ").hide();
+       $("#mynameis").hide();
+       $("#femi").hide();
+
+
+
+
+
+       $("#phone ").fadeOut();
+       $("#mail2 ").fadeOut();
+       $("#title ").fadeOut();
+
+
+
+       $("#hi").toggle(1000, function () {
+
+           $("#mynameis").toggle(1000, function () {
+
+               $("#femi").toggle(1000, function () {
+
+                   setTimeout(() => {
+
+                       callnext();
+                   }, 100)
+               })
+
+           })
+       })
+
+
+
+
+       function callnext() {
+
+           $("#title ").toggle(1000, function () {
+
+               $("#phone ").toggle(1000, function () {
+
+                   $("#mail2 ").toggle(1000)
+
+               })
+           })
+
+
+       }
+
+
+
     setInterval(() => {
 
-        $(".profile h2").effect("bounce", { times: 10, distance: -60 }, 1000);
-        $(".profile #femi").effect("bounce", { times: 10, distance: 15 }, 1000);
+        $(".profile #hi").effect("bounce", { times: 8, distance: -60 }, 1000);
+        $(".profile #mynameis").effect("bounce", { times: 8, distance: -50 }, 1000);
 
-    }, 2000)
+        $(".profile  #femi").effect("bounce", { times: 10, distance: -20 }, 1000);
+    }, 4000)
+
+
+
+
 
 
 
