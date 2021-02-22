@@ -3,7 +3,6 @@
 
 
 
-
 $(window).on("load", function () {
 
     /*
@@ -26,51 +25,51 @@ $(window).on("load", function () {
 
 
 
-       $("#hi ").hide();
-       $("#mynameis").hide();
-       $("#femi").hide();
+    $("#hi ").hide();
+    $("#mynameis").hide();
+    $("#femi").hide();
 
 
 
 
 
-       $("#phone ").fadeOut();
-       $("#mail2 ").fadeOut();
-       $("#title ").fadeOut();
+    $("#phone ").hide();
+    $("#mail2 ").hide();
+    $("#title ").hide();
 
 
 
-       $("#hi").toggle(1000, function () {
+    $("#hi").toggle(1000, function () {
 
-           $("#mynameis").toggle(1000, function () {
+        $("#mynameis").toggle(1000, function () {
 
-               $("#femi").toggle(1000, function () {
+            $("#femi").toggle(1000, function () {
 
-                   setTimeout(() => {
+                setTimeout(() => {
 
-                       callnext();
-                   }, 100)
-               })
+                    callnext();
+                }, 100)
+            })
 
-           })
-       })
-
-
+        })
+    })
 
 
-       function callnext() {
-
-           $("#title ").toggle(1000, function () {
-
-               $("#phone ").toggle(1000, function () {
-
-                   $("#mail2 ").toggle(1000)
-
-               })
-           })
 
 
-       }
+    function callnext() {
+
+        $("#title ").toggle(1000, function () {
+
+            $("#phone ").toggle(1000, function () {
+
+                $("#mail2 ").toggle(1000)
+
+            })
+        })
+
+
+    }
 
 
 
