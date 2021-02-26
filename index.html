@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <link rel="stylesheet" href="/css/home.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +9,8 @@
 </head>
 
 <body>
-
     <div class="flex-container">
-        <div class="skills_overlay" style="display: none;">
+        <div class="skills_overlay"  style="display: none;">
             <p>
                 Over 5 years experience on Idustrial automation and control system,
                 <span style="margin-left: .5em;"></span> Full-stack software application development with main intrest
@@ -23,7 +21,8 @@
             <div class="wrapper ">
                 <div class="image-area">
                     <div class="single-img   automation ">
-                        <img src="/mywebsiteImages/IndustrialAutomayionlogo.png" style="width: 130px;background-color: white;">
+                        <img src="/mywebsiteImages/IndustrialAutomayionlogo.png"
+                            style="width: 130px;background-color: white;">
                     </div>
 
                     <div class=" single-img    siemens">
@@ -92,15 +91,20 @@
 
 
         <div class="mail_overlay" style="display: none;">
-            <div>
+            <div class="contact-form">
                 <form>
-                    <input type="text" placeholder="SUBJECT" id="subject">
-                    <input type="email" placeholder="EMAIL" id="email">
-                    <textarea name="" id="" cols="3" rows="10" placeholder="MESSAGE"></textarea>
-                    <span> <button type="submit" class="button">SEND</button>
-                        <button type="submit" class="button cancel"
-                            style="background-color:transparent;color: red;">CANCEL</button>
-                    </span>
+                    <div class="form-input">
+                        <input type="text" placeholder="SUBJECT" id="subject">
+                        <input type="email" placeholder="EMAIL" id="email">
+                        <textarea name="" id="" rows="5" placeholder="MESSAGE" class="text-area"></textarea>
+
+                        <span>
+                            <button type="submit" class="button submit">SEND</button>
+                            <button type="submit" id="cancel" class="button cancel">CANCEL</button>
+                        </span>
+
+                    </div>
+
                 </form>
             </div>
         </div>
@@ -112,16 +116,21 @@
 
         <div class="navbar" style="order: 1;">
             <div>
-                <a href="https://github.com/FemiAbitogun?tab=repositories"><img src="/mywebsiteImages/GIT.png"></a>
+                <a href="https://github.com/FemiAbitogun?tab=repositories" target="_blank"><img
+                        src="/mywebsiteImages/GIT.png"></a>
             </div>
 
+
             <div>
-                <a href="http://www.linkedin.com/in/femi-abitogun-b367a1102/"><img
+                <a href="http://www.linkedin.com/in/femi-abitogun-b367a1102/" target="_blank"><img
                         src="/mywebsiteImages/linkedin-icon-png-transparent-images--pictures--becuo-4.png"></a>
             </div>
+
+
             <div id="skills">
                 <img src="/mywebsiteImages/skilll3.jpg">
             </div>
+
 
             <div id="mail" style="background-color: rgba(0, 0, 255, 0.281);">
                 <img src="/mywebsiteImages/mail-post-symbol-logo-C7C3A0C8BD-seeklogo.com.png">
@@ -166,8 +175,6 @@
 
 
     <script>
-
-
         const mailClicked = document.getElementById("mail");
 
         mailClicked.addEventListener("click", () => {
