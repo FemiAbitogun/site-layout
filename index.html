@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="./css/home.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FEMI ABITOGUN | WELCOME</title>
@@ -10,13 +10,7 @@
 
 <body>
     <div class="flex-container">
-        <div class="skills_overlay"  style="display: none;">
-            <p>
-                Over 5 years experience on Idustrial automation and control system,
-                <span style="margin-left: .5em;"></span> Full-stack software application development with main intrest
-                in hardware hacking and automation.
-
-            </p>
+        <div class="skills_overlay" style="display: none;">
 
             <div class="wrapper ">
                 <div class="image-area">
@@ -59,9 +53,7 @@
                     <div class="single-img  jquery">
                         <img src="/mywebsiteImages/kisspng-jquery-web-development.jpg" alt="">
                     </div>
-                    <div class="single-img  vuejs" style="background-color: white;">
-                        <img src="/mywebsiteImages/vuejs2.png" alt="">
-                    </div>
+
                     <div class="single-img  mern">
                         <img src="/mywebsiteImages/mern.png" alt="">
                     </div>
@@ -75,20 +67,9 @@
                     <div class="single-img  niceMongoDB">
                         <img src="/mywebsiteImages/niceMongoDB.jpg" alt="">
                     </div>
-                    <div class="single-img  reactNative">
-                        <img src="/mywebsiteImages/React-Native-Reddit.png" alt="">
-                    </div>
-
-                    <div class="single-img  python">
-                        <img src="/mywebsiteImages/do-web-development-using-python-django.png" alt="">
-                    </div>
                 </div>
             </div>
         </div>
-
-
-
-
 
         <div class="mail_overlay" style="display: none;">
             <div class="contact-form">
@@ -109,74 +90,67 @@
             </div>
         </div>
 
+        <div class="navbar">
 
-
-
-
-
-        <div class="navbar" style="order: 1;">
-            <div>
-                <a href="https://github.com/FemiAbitogun?tab=repositories" target="_blank"><img
-                        src="/mywebsiteImages/GIT.png"></a>
+            <div id="skills">
+                <img src="./mywebsiteImages/skillsIcon.png">
             </div>
-
 
             <div>
                 <a href="http://www.linkedin.com/in/femi-abitogun-b367a1102/" target="_blank"><img
-                        src="/mywebsiteImages/linkedin-icon-png-transparent-images--pictures--becuo-4.png"></a>
+                        src="./mywebsiteImages/linkedin-icon-png-transparent-images--pictures--becuo-4.png"> </a>
             </div>
 
 
-            <div id="skills">
-                <img src="/mywebsiteImages/skilll3.jpg">
+
+            <div>
+                <a href="https://github.com/FemiAbitogun?tab=repositories" target="_blank"><img
+                        src="./mywebsiteImages/GIT.png"></a>
             </div>
 
 
-            <div id="mail" style="background-color: rgba(0, 0, 255, 0.281);">
-                <img src="/mywebsiteImages/mail-post-symbol-logo-C7C3A0C8BD-seeklogo.com.png">
+
+
+            <div id="mail" style="background-color: rgba(0, 0, 255, 0.281)">
+                <img src="./mywebsiteImages/mail-post-symbol-logo-C7C3A0C8BD-seeklogo.com.png">
             </div>
         </div>
 
 
-        <div class="profile" style="order: 2;">
-
-
+        <div class="profile">
             <div>
-                <h2 class="into" id="hi"><b> Hi!</b></h2>
-                <h2 class="into" id="mynameis"><b>My Name is</b> </h2>
-                <h2 class="into" id="femi"> <b>F</b>emi</h2>
+                <h2  id="hi"><b> Hi!</b></h2>
+                <h2  id="mynameis"><b>My Name is</b> </h2>
+                <h2  id="femi"> <b>F</b>emi</h2>
 
-
-                <h5 id="title">SOFTWARE | INDUSTRIAL AUTOMATION ENGINEER
+                <h5 id="title">Software || Industrial Automation Engineer
                 </h5> <br>
-                <h5 id="phone">+2348138376543 | +2349026080617
+                <h5 id="phone"><b>+2348138376543 | +2349026080617</b>
                 </h5><br>
                 <h5 id="mail2">abitogun22@gmail.com
                 </h5>
 
             </div>
 
+
+
         </div>
-
-
-
-
-
-
-
 
     </div>
 
 
 
-    <script src="/jquery.js"></script>
+    <!-- <script src="./jquery.js"></script> -->
+    <!-- <script src="./jquery.js"></script> -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+   
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
 
 
     <script>
         const mailClicked = document.getElementById("mail");
-
         mailClicked.addEventListener("click", () => {
             document.querySelector(".mail_overlay").style.display = "block";
         })
@@ -197,16 +171,7 @@
         const hideSkills = document.querySelector(".skills_overlay").addEventListener("click", () => {
             document.querySelector(".skills_overlay").style.display = "none";
         })
-
-
-
     </script>
-
-
-
-
-
-
 
 </body>
 
