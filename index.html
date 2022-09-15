@@ -5,21 +5,21 @@
     <link rel="stylesheet" href="./css/home.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FEMI ABITOGUN | WELCOME</title>
+    <title>FEMI ABITOGUN</title>
 </head>
+
 
 <body>
     <div class="flex-container">
         <div class="skills_overlay" style="display: none;">
-
-            <div class="wrapper ">
+            <div class="wrapper">
                 <div class="image-area">
                     <div class="single-img   automation ">
                         <img src="/mywebsiteImages/IndustrialAutomayionlogo.png"
                             style="width: 130px;background-color: white;">
                     </div>
 
-                    <div class=" single-img    siemens">
+                    <div class="single-img siemens">
                         <img src="/mywebsiteImages/siemens.jpg" alt="">
                     </div>
 
@@ -71,6 +71,24 @@
             </div>
         </div>
 
+        <div class="jobs_overlay" style="display:none;">
+            <div class="job_display">
+                <h1 class="exit" id="exit">&times;</h1>
+                <div class="job_display_item">
+                    <div>
+                        <h4>Financial Management (Cooperative) Application</h4><br>
+                        <b>Tools {</b>
+                        <b>MongoDb,React Js,JSON web token,Express,Node js,Bycrypt Js}</b>
+                        <button class="button cancel">
+                            <a href="https://femi-abitogun-coop-project.netlify.app/" target="_blank">Go to Site</a>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
         <div class="mail_overlay" style="display: none;">
             <div class="contact-form">
                 <form>
@@ -90,10 +108,18 @@
             </div>
         </div>
 
-        <div class="navbar">
 
+
+
+
+
+        <div class="navbar">
             <div id="skills">
                 <img src="./mywebsiteImages/skillsIcon.png">
+            </div>
+
+            <div id="jobs">
+                <img src="./mywebsiteImages/job.png">
             </div>
 
             <div>
@@ -119,9 +145,9 @@
 
         <div class="profile">
             <div>
-                <h2  id="hi"><b> Hi!</b></h2>
-                <h2  id="mynameis"><b>My Name is</b> </h2>
-                <h2  id="femi"> <b>F</b>emi</h2>
+                <h2 id="hi"><b> Hi!</b></h2>
+                <h2 id="mynameis"><b>My Name is</b> </h2>
+                <h2 id="femi"> <b>F</b>emi</h2>
 
                 <h5 id="title">Software || Industrial Automation Engineer
                 </h5> <br>
@@ -142,15 +168,27 @@
 
     <!-- <script src="./jquery.js"></script> -->
     <!-- <script src="./jquery.js"></script> -->
-    
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-   
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="./script.js"></script>
 
 
     <script>
         const mailClicked = document.getElementById("mail");
+        const jobClicked = document.getElementById("jobs");
+        const exit = document.getElementById("exit");
+
+        exit.addEventListener("click", () => {
+            document.querySelector(".jobs_overlay").style.display = "none";
+        })
+
+        jobClicked.addEventListener("click", () => {
+            document.querySelector(".jobs_overlay").style.display = "block";
+        })
+
         mailClicked.addEventListener("click", () => {
             document.querySelector(".mail_overlay").style.display = "block";
         })

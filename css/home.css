@@ -14,7 +14,9 @@ body {
     font-weight: bold;
     font-size: 1.1em;
     color: white;
+    box-sizing: border-box;
     background: url('/mywebsiteImages/programmin1.jpg') no-repeat;
+    /* background: url('/mywebsiteImages/programmin1.jpg'); */
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -53,6 +55,7 @@ a {
     z-index: 1;
     overflow: hidden;
 }
+
 .flex-container .profile {
     width: 100%;
     height: 100%;
@@ -63,6 +66,7 @@ a {
     flex-wrap: wrap;
     background-color: rgba(10, 10, 10, 0.338);
 }
+
 .flex-container .navbar {
     height: 100%;
     max-width: 15%;
@@ -150,8 +154,60 @@ a {
     overflow: hidden;
 }
 
+.jobs_overlay {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.661);
+    z-index: 2;
+    /* cursor: pointer; */
+    overflow: hidden;
+}
+.exit{
+    color:red;
+    cursor: pointer;
+}
+.job_display {
+    width: 100%;
+    height: 100%;
+}
+.job_display_item{
+    width: 80%;
+    margin: 1em;
+    background-color:rgba(0, 0, 0, 0.699);
+    padding:1em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ .job_display_item button{
+    width: 7em;
+    height: 2.5em;
+    padding:.1em;
+    border-radius: .4em;
+    border: none;
+}
 
-.skills_overlay{
+.job_display_item button{
+    border: 1px solid rgb(250, 248, 248);
+}
+.job_display_item button:hover {
+    border: 1px solid rgb(198, 6, 6);
+}
+
+
+
+
+
+
+.skills_overlay {
     position: absolute;
     content: "";
     width: 100%;
@@ -192,8 +248,8 @@ a {
 }
 
 form {
-    height:auto;
-    padding:20px 50px;
+    height: auto;
+    padding: 20px 50px;
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
 }
@@ -201,7 +257,7 @@ form {
 form .form-input {
     display: flex;
     flex-direction: column;
-    align-items:center ;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -220,7 +276,8 @@ form textarea {
     font-size: 1em;
 }
 
-.form-input input[type="text"], .form-input input[type="email"]{
+.form-input input[type="text"],
+.form-input input[type="email"] {
 
     margin: 10px;
     outline: none;
@@ -236,8 +293,9 @@ form textarea {
     transition: .25s;
 }
 
-.form-input input[type="text"]:focus, .form-input input[type="email"]:focus{
-  transform: scale(1.25);
+.form-input input[type="text"]:focus,
+.form-input input[type="email"]:focus {
+    transform: scale(1.25);
 }
 
 
@@ -247,9 +305,9 @@ form textarea {
 
 
 .button {
-    height: 4em;
-    width: 10em;
- 
+    height: 2.5em;
+    width: 7em;
+
     border-radius: 16px;
     background-color: transparent;
     letter-spacing: .1em;
@@ -261,20 +319,21 @@ form textarea {
     transition: .25s ease-in;
 }
 
-.submit{
-    border:1px solid green ;
-}
-#cancel{
-    border:1px solid red ; 
+.submit {
+    border: 1px solid green;
 }
 
-.submit:hover{
-   background-color: rgba(4, 247, 4, 0.623);
+#cancel {
+    border: 1px solid rgb(72, 65, 65);
+}
+
+.submit:hover {
+    background-color: rgba(4, 247, 4, 0.623);
 
 }
 
-span #cancel:hover{
-   background-color: rgba(255, 0, 0, 0.63);
+span #cancel:hover {
+    background-color: rgba(255, 0, 0, 0.63);
 }
 
 

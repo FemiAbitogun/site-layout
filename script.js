@@ -29,10 +29,6 @@ $(window).on("load", function () {
     $("#mynameis").hide();
     $("#femi").hide();
 
-
-
-
-
     $("#phone ").hide();
     $("#mail2 ").hide();
     $("#title ").hide();
@@ -77,7 +73,6 @@ $(window).on("load", function () {
 
         $(".profile #hi").effect("bounce", { times: 8, distance: -60 }, 1000);
         $(".profile #mynameis").effect("bounce", { times: 8, distance: -50 }, 1000);
-
         $(".profile  #femi").effect("bounce", { times: 10, distance: -20 }, 1000);
     }, 4000)
 
