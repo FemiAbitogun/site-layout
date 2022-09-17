@@ -24,7 +24,8 @@ $(window).on("load", function () {
         */
 
 
-  
+    
+          $(".profile_inner ").hide();
 
     $("#hi ").hide();
     $("#mynameis").hide();
@@ -37,7 +38,7 @@ $(window).on("load", function () {
 
 
     $("#hi").toggle(1000, function () {
-        $("#flexContainer").show();
+         $(".profile_inner").show();
         $("#mynameis").toggle(1000, function () {
 
             $("#femi").toggle(1000, function () {
@@ -75,7 +76,7 @@ $(window).on("load", function () {
         $(".profile #hi").effect("bounce", { times: 8, distance: -60 }, 1000);
         $(".profile #mynameis").effect("bounce", { times: 8, distance: -50 }, 1000);
         $(".profile  #femi").effect("bounce", { times: 10, distance: -20 }, 1000);
-    }, 4000)
+    }, 3000)
 
 
 
