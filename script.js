@@ -25,7 +25,14 @@ $(window).on("load", function () {
 
 
     
-          $(".profile_inner ").hide();
+          $("profile_inner").hide();
+        
+     
+          
+          
+          
+          
+          
 
     $("#hi ").hide();
     $("#mynameis").hide();
@@ -39,6 +46,7 @@ $(window).on("load", function () {
 
     $("#hi").toggle(1000, function () {
          $(".profile_inner").show();
+         $(".navbar").show(500);
         $("#mynameis").toggle(1000, function () {
 
             $("#femi").toggle(1000, function () {
