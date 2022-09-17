@@ -115,7 +115,10 @@ a {
     font-size: 3em;
     color: crimson;
 }
-
+.job_display_item div h4 b{
+    font-size: 3em;
+    color: crimson;
+}
 
 
 
@@ -178,10 +181,11 @@ a {
 }
 .job_display_item{
     width: 80%;
+    max-height: 20em;
     margin: 1em;
     background-color:rgba(0, 0, 0, 0.699);
     padding:1em;
-    border-radius: 3em;
+    border-radius: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,7 +193,7 @@ a {
 }
  .job_display_item button{
     width: 7em;
-    height: 2.5em;
+    height: 2.2em;
     padding:.1em;
     border-radius: .4em;
     border: none;
@@ -430,9 +434,14 @@ span #cancel:hover {
 
 }
 
+.single-img.TIA {
+
+    transform: rotateY(160deg) translateZ(300px);
+
+}
 .single-img.javacript {
 
-    transform: rotateY(154deg) translateZ(300px);
+    transform: rotateY(196deg) translateZ(300px);
 
 }
 
@@ -440,31 +449,31 @@ span #cancel:hover {
 
 .single-img.jquery {
 
-    transform: rotateY(176deg) translateZ(300px);
+    transform: rotateY(222deg) translateZ(300px);
 
 }
 
 .single-img.mern {
 
-    transform: rotateY(222deg) translateZ(300px);
+    transform: rotateY(242deg) translateZ(300px);
 
 }
 
 .single-img.mysql {
 
-    transform: rotateY(242deg) translateZ(300px);
+    transform: rotateY(262deg) translateZ(300px);
 
 }
 
 .single-img.GIT {
 
-    transform: rotateY(264deg) translateZ(300px);
+    transform: rotateY(286deg) translateZ(300px);
 
 }
 
 .single-img.niceMongoDB {
 
-    transform: rotateY(286deg) translateZ(300px);
+    transform: rotateY(308deg) translateZ(300px);
 
 }
 

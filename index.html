@@ -10,7 +10,7 @@
 
 
 <body>
-    <div class="flex-container">
+    <div id="flexContainer" class="flex-container" style="display:none ;">
         <div class="skills_overlay" style="display: none;">
             <div class="wrapper">
                 <div class="image-area">
@@ -45,6 +45,9 @@
                     <div class="single-img  csharp">
                         <img src="/mywebsiteImages/c-sharp.png" alt="">
                     </div>
+                    <div class="single-img  TIA">
+                        <img src="/mywebsiteImages/TIA.jfif" alt="" style="width: 170px;">
+                    </div>
 
                     <div class="single-img  javacript">
                         <img src="/mywebsiteImages/javacriptCssHtml.jpg" alt="">
@@ -76,12 +79,13 @@
                 <h1 class="exit" id="exit">&times;</h1>
                 <div class="job_display_item">
                     <div>
-                        <h4>Financial Management (Cooperative) Application</h4><br>
-                        <b>Tools {</b>
-                        <b>MongoDb,React Js,JSON web token,Express,Node js,Bycrypt Js}</b>
-                        <button class="button cancel">
-                            <a href="https://femi-abitogun-coop-project.netlify.app/" target="_blank">Go to Site</a>
-                        </button>
+                        <h4><b>F</b>inancial Management (Cooperative) Application</h4>
+                        <p>
+                            <b>Tools {</b>
+                            <b>MongoDb,React Js,JSON web token,Express,Node js,Bycrypt Js,Cloudinary}</b>
+                            <button class="button cancel">
+                                <a href="https://femi-abitogun-coop-project.netlify.app/" target="_blank">Go to Site</a>
+                            </button>
                     </div>
 
                 </div>
@@ -91,14 +95,14 @@
 
         <div class="mail_overlay" style="display: none;">
             <div class="contact-form">
-                <form>
+                <form onsubmit="event.preventDefault(); closeTemplate();">
                     <div class="form-input">
                         <input type="text" placeholder="SUBJECT" id="subject">
                         <input type="email" placeholder="EMAIL" id="email">
                         <textarea name="" id="" rows="5" placeholder="MESSAGE" class="text-area"></textarea>
 
                         <span>
-                            <button type="submit" class="button submit">SEND</button>
+                            <button type="" class="button submit">SEND</button>
                             <button type="submit" id="cancel" class="button cancel">CANCEL</button>
                         </span>
 
@@ -137,7 +141,7 @@
 
 
 
-            <div id="mail" style="background-color: rgba(0, 0, 255, 0.281)">
+            <div id="mail">
                 <img src="./mywebsiteImages/mail-post-symbol-logo-C7C3A0C8BD-seeklogo.com.png">
             </div>
         </div>
@@ -164,27 +168,17 @@
 
     </div>
 
-
-
-    <!-- <script src="./jquery.js"></script> -->
-    <!-- <script src="./jquery.js"></script> -->
-
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="./script.js"></script>
-
-
     <script>
         const mailClicked = document.getElementById("mail");
         const jobClicked = document.getElementById("jobs");
         const exit = document.getElementById("exit");
-
         exit.addEventListener("click", () => {
             document.querySelector(".jobs_overlay").style.display = "none";
-        })
-
+        });
         jobClicked.addEventListener("click", () => {
             document.querySelector(".jobs_overlay").style.display = "block";
         })
@@ -194,10 +188,9 @@
         })
 
 
-        document.querySelector(".cancel").addEventListener("click", () => {
+        function closeTemplate() {
             document.querySelector(".mail_overlay").style.display = "none";
-        })
-
+        }
 
         const skillsClicked = document.getElementById("skills");
 

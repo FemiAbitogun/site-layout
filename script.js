@@ -24,6 +24,7 @@ $(window).on("load", function () {
         */
 
 
+  
 
     $("#hi ").hide();
     $("#mynameis").hide();
@@ -36,7 +37,7 @@ $(window).on("load", function () {
 
 
     $("#hi").toggle(1000, function () {
-
+        $("#flexContainer").show();
         $("#mynameis").toggle(1000, function () {
 
             $("#femi").toggle(1000, function () {
