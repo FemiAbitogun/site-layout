@@ -4,36 +4,7 @@
 
 
 $(window).on("load", function () {
-
-    /*
-        $(".profile div").hover(function () {
-          //  $(this).effect( "bounce", { times: 3 }, 300);
-        })
-    */
-
-
-    /*
-        selector.effect( "bounce", {arguments}, speed );
-        Parameters
-        Here is the description of all the arguments − 
->>>> direction − The direction of the effect. Can be "up", "down", "left", "right". Default is "up".
-    >>>>>  distance − Distance to bounce. Default is 20
-       >>>>> mode: The mode of the effect. Can be "show "hide" or "effect". Default is "effect".
-          >>>> times − Times to bounce. Default is 5.
-        
-        */
-
-
-    
-          $("profile_inner").hide();
-        
-     
-          
-          
-          
-          
-          
-
+    $("profile_inner").hide();
     $("#hi ").hide();
     $("#mynameis").hide();
     $("#femi").hide();
@@ -42,11 +13,9 @@ $(window).on("load", function () {
     $("#mail2 ").hide();
     $("#title ").hide();
 
-
-
     $("#hi").toggle(1000, function () {
-         $(".profile_inner").show();
-         $(".navbar").show(500);
+        $(".profile_inner").show();
+       
         $("#mynameis").toggle(1000, function () {
 
             $("#femi").toggle(1000, function () {
@@ -58,6 +27,7 @@ $(window).on("load", function () {
             })
 
         })
+        $(".navbar").fadeIn(20000);
     })
 
 
@@ -80,7 +50,6 @@ $(window).on("load", function () {
 
 
     setInterval(() => {
-
         $(".profile #hi").effect("bounce", { times: 8, distance: -60 }, 1000);
         $(".profile #mynameis").effect("bounce", { times: 8, distance: -50 }, 1000);
         $(".profile  #femi").effect("bounce", { times: 10, distance: -20 }, 1000);
